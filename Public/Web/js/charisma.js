@@ -60,57 +60,8 @@ $(document).ready(function(){
 	//服务器列表刷新
 	g_list_Server.Refresh(false);
 	
-	//修改信息
-	$('.btn-modifycharacter').live('click', function(e){
-		
-		var txt = $(this).attr('data-value');
-		var obj = eval("[" + txt + "]")[0];
-		
-		$('#modifycharacter').modal('show');
-		$('form#modifycharform #guid').val(obj.guid);
-		$('form#modifycharform #name').val(obj.name);
-		$('form#modifycharform #vip').val(obj.vipLevel);
-		$('form#modifycharform #money').val(obj.vm);
-		$('form#modifycharform #rmb').val(obj.rm);
-		$('form#modifycharform #level').val(obj.level);
-		$('form#modifycharform #exp').val(obj.xp);
-		$('form#modifycharform #ep').val(obj.ep);
-		$('form#modifycharform #ep-max').text(obj.maxEp);
-		$('form#modifycharform #sp').val(obj.sp);
-		$('form#modifycharform #sp-max').text(obj.maxSp);
-	});
 
-	//获取角色信息
-	$('.btn-character').click(function(e){
-		var txt = $(this).attr('data-value');
-		var obj = eval("[" + txt + "]")[0];
-		var txt = ""
-		        + "<p>" + "<b>账号：</b>"   + obj.account_id + "</p>"
-		        + "<p>" + "<b>头像：</b>"   + obj.displayId + "</p>"
-		        + "<p>" + "<b>攻击力：</b>" + obj.armor + "</p>"
-		        + "<p>" + "<b>伤害：</b>"   + obj.damage + "</p>"
-		        + "<p>" + "<b>联盟：</b>"   + "[" + obj.legionId + "] " + obj.legionName + "</p>"
-		        + "<p>" + "<b>体力值：</b>" + obj.sp + "/" + obj.maxSp + "[+" + obj.epPercent + "]" 
-		        + "<p>" + "<b>下次回复：</b>" + new Date(parseInt(obj.epSecond)).toLocaleString() + "]</p>"
-		        + "<p>" + "<b>精力值：</b>" + obj.ep + "/" + obj.maxEp + "[+" + obj.spPercent + "]"
-		        + "<p>" + "<b>下次回复：</b>" + new Date(parseInt(obj.spSecond)).toLocaleString() + "]</p>"
-		        + "<p>" + "<b>经验值：</b>"   + obj.xp + "/" + obj.nextxp + "</p>"
-		        + "<p>" + "<b>英雄攻击：</b>" + obj.heroArmorMin + "~" + obj.heroArmorMax + "</p>"
-		        + "<p>" + "<b>英雄伤害：</b>" + obj.heroDamageMin + "~" + obj.heroDamageMax + "</p>"
-		        + "<p>" + "<b>EP/SP回复间隔：</b>" + obj.epRestorePP + "/" + obj.spRestorePP + "</p>"
-		        + "<p>" + "<b>卡牌数量：</b>" + obj.cardCount + "/" + obj.maxCardCount + "</p>"
-		        + "<p>" + "<b>免战：</b>"    + obj.avoidTotalTime + "      T[" + obj.avoidWarTime + "]" + "</p>"
-		        + "<p>" + "<b>进攻记录：</b>" + obj.attackWinCount + "/" + obj.attackTotalCount + "，进攻收入：$" + obj.attackWinMoney + "##" + obj.attackWinItem + "</p>"
-		        + "<p>" + "<b>防守记录：</b>" + obj.defenceWinCount + "/" + obj.defenceTotalCount + "，防守收入：" + obj.defenceWinMoney + "</p>"
-		        + "<p>" + "<b>引导标记：</b>" + obj.guideFlag + "</p>";
-        $('#characterdiv #htxt').text(obj.name);
-		$('#characterdiv #info').html(
-			txt
-		);
-		var attr = $('#characterdiv #grayscale').attr('path');
-		attr += obj.displayId + ".png";
-		$('#characterdiv #grayscale').attr('src', attr);
-	});
+
 	
 	/************************************************************************************
 	 * 消息相关

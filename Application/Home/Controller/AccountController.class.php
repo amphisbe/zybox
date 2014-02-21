@@ -94,20 +94,18 @@ class AccountController extends BaseController {
             
             if(isset($_GET['name']))
                 $addobj['name'] = $_GET['name'];
-            if(isset($_GET['vip']))
-                $addobj['vipLevel'] = $_GET['vip'];
-            if(isset($_GET['money']))
-                $addobj['vm'] = $_GET['money'];
+            if(isset($_GET['vipLevel']))
+                $addobj['vipLevel'] = $_GET['vipLevel'];
+            if(isset($_GET['vm']))
+                $addobj['vm'] = $_GET['vm'];
 
-            if(isset($_GET['rmb']))
-                $addobj['rm'] = $_GET['rmb'];
-            if(isset($_GET['vip']))
-                $addobj['vipLevel'] = $_GET['vip'];     
+            if(isset($_GET['rm']))
+                $addobj['rm'] = $_GET['rm'];
 
             if(isset($_GET['level']))
                 $addobj['level'] = $_GET['level'];
-            if(isset($_GET['exp']))
-                $addobj['xp'] = $_GET['exp'];                 
+            if(isset($_GET['xp']))
+                $addobj['xp'] = $_GET['xp'];                 
             
             
             $Character = $this -> switchmodel('characters', '', 'Characters');
