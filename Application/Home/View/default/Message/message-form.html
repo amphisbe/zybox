@@ -1,0 +1,43 @@
+<fieldset>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">消息编号 </label>
+		<div class="controls">
+			<input type="text" class="span6 typeahead" readonly="readonly" id="msgid" name="msgid" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">消息主类型 </label>
+		<div class="controls">
+			<input type="text" class="span6 typeahead" id="ptype" name="ptype" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">消息子类型 </label>
+		<div class="controls">
+			<input type="text" class="span6 typeahead" id="stype" name="stype" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="textarea2">消息编辑</label>
+		<div class="controls">
+			<textarea class="cleditor" id="msgcontent" name="msgcontent" rows="3"></textarea>
+		</div>
+	</div>
+	<!-- <div class="control-group">
+		<label class="control-label" for="msgselect">是否读取</label>
+		<div class="controls">
+			<select name="msgselect" id="msgselect">
+				<option value="1">已读取</option>
+				<option value="0">未读取</option>
+			</select>
+		</div>
+	</div> -->
+	<div class="form-actions">
+		<button type="submit" class="btn btn-primary">
+			保存
+		</button>
+		<button class="btn" data-dismiss="modal">
+			关闭
+		</button>
+	</div>
+</fieldset>

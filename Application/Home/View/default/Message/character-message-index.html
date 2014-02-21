@@ -1,0 +1,56 @@
+<div class="row-fluid sortable">
+	<div class="box span8">
+		<div class="box-header well" data-original-title>
+			<h2><i class="icon-user"></i> {$TplStr['_MODAL_TITLE']}</h2>
+			<div class="box-icon">
+				<a class="btn btn-setting btn-round" rel="tooltip" title="添加个人消息" id="btn-addmsg" name='{$CharName}' data-id='{$CharId}'><i class="icon-plus"></i></a>
+				<a class="btn btn-search btn-round" rel="tooltip" href="__ROOT__/Message/character" title="显示全部角色的消息"><i class="icon-search"></i></a>
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+			<table class="table table-striped table-bordered bootstrap-datatable datatable" name="table-board" id="table-board">
+			  <thead>
+				  <tr>
+					  <th>角色编号</th>
+					  <th>角色名称</th>
+					  <th>时间</th>
+					  <th>操作</th>
+				  </tr>
+			  </thead>   
+			  <tbody id="tbody-msg">
+			  	<fieldset id="fieldset-msg">
+			  	</fieldset>
+			  	<volist name="lists" id="vo">
+				<tr >
+					<td><a href="__ROOT__/Message/character?guid={$vo.charGuid}">{$vo.charGuid}</a></td>
+					<td class="center">{$vo.name}</td>
+					<td class="center">{$vo.time}</td>
+					<td class="center" >
+						<button class="btn btn-mini btn-primary btn-showmsg" data-id="{$vo.guid}" data="{$vo.jsontxt}">显示消息</button>
+						<button class="btn btn-mini btn-warning btn-modifymsg" data-id="{$vo.guid}" data="{$vo.jsontxt}">修改消息</button>
+						<button class="btn btn-mini btn-danger btn-delmsg" data-id="{$vo.guid}" data="{$vo.jsontxt}">删除消息</button>
+					</td>
+				</tr>
+				</volist>
+			  </tbody>
+		  </table>            
+		</div>
+	</div><!--/span-->
+	<div class="box span4">
+		<div class="box-header well">
+			<h2><i class="icon-info-sign"></i> 消息内容</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-setting btn-round" id="btn-modifymessage"><i class="icon-wrench"></i></a>
+				<!-- <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a> -->
+			</div>
+		</div>
+		<div class="box-content" id="msgdiv">
+			<h1 id="htxt"></h1>
+			
+			<div class="clearfix" id="info"></div>
+		</div>
+	</div>
+</div><!--/row-->
+<!-- content ends -->

@@ -1,0 +1,129 @@
+<fieldset>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">活动编号 / 名称</label>
+		<div class="controls">
+			<input type="text" readonly="readonly" id="guid" name="guid" >
+			<input type="text" id="name" name="name" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">条件  / 最大数量</label>
+		<div class="controls">
+			<input type="text" id="condition" name="condition" >
+			<input type="text" id="maxCount" name="maxCount" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">材料1 / 数量</label>
+		<div class="controls">
+			<select id="material1Param" name="material1Param" class="materialParam">
+			</select>
+			 <!-- ref-param="#material1Param" ref-name="#material1Name" -->
+			<input type="text" id="material1Count" name="material1Count" class="validate-input" data-type="number"> 
+			<select id="material1Type" name="material1Type">
+				<option value="1">卡牌</option>
+				<option value="2">碎片</option>
+				<option value="3">道具</option>
+				<option value="4">金币</option>
+				<option value="5">元宝</option>
+				<option value="6">金宝箱</option>
+				<option value="7">银宝箱</option>
+				<option value="8">技能</option>
+			</select>
+			<a href="javascript:void(0)" class="choose-image" id="material1-image"><img class="yellowborder 2pxborder" src="__ROOT__/Public/Web/img/no-display.png" width="40px"></a>
+			<input type="text" id="material1DisplayId" name="material1DisplayId" style="visibility:hidden"> 
+			<!-- <input type="text" id="material1Name" name="material1Name" style="visibility:hidden1">  -->
+		</div>
+	</div>
+	<div class="control-group ">
+		<label class="control-label span2" for="typeahead">材料2 / 数量</label>
+		<div class="controls">
+			<select id="material2Param" name="material2Param" class="materialParam">
+			</select>
+			 <!-- ref-param="#material2Param" ref-name="#material2Name" -->
+			<input type="text" id="material2Count" name="material2Count" class="validate-input" data-type="number"> 
+			<select id="material2Type" name="material2Type">
+				<option value="1">卡牌</option>
+				<option value="2">碎片</option>
+				<option value="3">道具</option>
+				<option value="4">金币</option>
+				<option value="5">元宝</option>
+				<option value="6">金宝箱</option>
+				<option value="7">银宝箱</option>
+				<option value="8">技能</option>
+			</select>
+			<a href="javascript:void(0)" class="choose-image" id="material2-image"><img class="yellowborder 2pxborder" src="__ROOT__/Public/Web/img/no-display.png" width="40px"></a>
+			<input type="text" id="material2DisplayId" name="material2DisplayId" style="visibility:hidden"> 
+			<!-- <input type="text" id="material2Name" name="material2Name" style="visibility:hidden">  -->
+		</div>
+	</div>
+	<div class="control-group ">
+		<label class="control-label span2" for="typeahead">材料3 / 数量</label>
+		<div class="controls">
+			<select id="material3Param" name="material3Param" class="materialParam">
+			</select>
+			<!-- ref-param="#material3Param" ref-name="#material3Name"   -->
+			<input type="text" id="material3Count" name="material3Count" class="validate-input" data-type="number"> 
+			<select id="material3Type" name="material3Type" >
+				<option value="1">卡牌</option>
+				<option value="2">碎片</option>
+				<option value="3">道具</option>
+				<option value="4">金币</option>
+				<option value="5">元宝</option>
+				<option value="6">金宝箱</option>
+				<option value="7">银宝箱</option>
+				<option value="8">技能</option>
+			</select>
+			<a href="javascript:void(0)" class="choose-image" id="material3-image"><img class="yellowborder 2pxborder" src="__ROOT__/Public/Web/img/no-display.png" width="40px"></a>
+			<input type="text" id="material3DisplayId" name="material3DisplayId" style="visibility:hidden"> 
+			<!-- <input type="text" id="material3Name" name="material3Name" style="visibility:hidden"> -->
+		</div>
+	</div>
+
+	<div class="control-group ">
+		<label class="control-label span2" for="typeahead">材料4 / 数量</label>
+		<div class="controls">
+			<select id="resultParam" name="resultParam" class="materialParam">
+			</select>
+			<!-- ref-param="#resultParam" ref-name="#resultName"   -->
+			<input type="text" id="resultCount" name="resultCount" class="validate-input" data-type="number"> 
+			<select id="resultType" name="resultType" >
+				<option value="1">卡牌</option>
+				<option value="2">碎片</option>
+				<option value="3">道具</option>
+				<option value="4">金币</option>
+				<option value="5">元宝</option>
+				<option value="6">金宝箱</option>
+				<option value="7">银宝箱</option>
+				<option value="8">技能</option>
+			</select>
+			<a href="javascript:void(0)" class="choose-image" id="material4-image"><img class="yellowborder 2pxborder" src="__ROOT__/Public/Web/img/no-display.png" width="40px"></a>
+			<input type="text" id="resultDisplayId" name="resultDisplayId" style="visibility:hidden"> 
+			<!--<input type="text" id="resultName" name="resultName" style="visibility:hidden">  -->
+		</div>
+	</div>
+	<div class="form-actions">
+		<button type="submit" class="btn btn-primary" onclick="saveactivityinfo()">
+			保存
+		</button>
+		<a class="btn " iconCls="icon-cancel" onclick="javascript:$('#modifyactivityinfomodal').dialog('close')">
+			关闭
+		</a>
+	</div>
+</fieldset>
+<div id="chooseitem-dlg" class="easyui-dialog" title="选择图片" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
+	<div id="tt" class="easyui-tabs" >
+		<volist name="lists" id="data">
+			<div title="【{$key}】开头" style="padding:20px;">
+			<ul class="thumbnails gallery">
+				<volist name="data['rows']" id="vo">
+				<li id="image-{$vo.guid}" class="thumbnail">
+					<a style="background:url(__PUBLIC__/Web/assets/small/{$vo.display_id}.png)" id='{$vo.display_id}' image-src='__PUBLIC__/Web/assets/small/{$vo.display_id}.png' class="activityform-image" title="{$vo.name}" href="javascript:void(0)">
+					</a>
+				</li>
+				</volist>
+			</ul>
+			</div>
+		</volist>
+	</div>
+</div>

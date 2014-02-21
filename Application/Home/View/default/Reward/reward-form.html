@@ -1,0 +1,33 @@
+<fieldset>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">奖励编号</label>
+		<div class="controls">
+			<input type="text" readonly="readonly" id="id" name="id" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">技能内容 </label>
+		<div class="controls">
+			<input type="text" id="content" name="content" >
+			<a class="btn btn-primary" iconCls="icon-cancel" onclick="chooseitemlist_reward()">选取卡牌</a>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">奖励类型</label>
+		<div class="controls">
+			<input type="text" id="type" name="type" >
+		</div>
+	</div>
+	<div class="form-actions">
+		<button type="button" class="btn btn-primary" onclick="savereward()">
+			保存
+		</button>
+		<a class="btn " iconCls="icon-cancel" onclick="javascript:$('#modifyskillmodal').dialog('close')">
+			关闭
+		</a>
+	</div>
+</fieldset>
+<div id="itemlist-dlg" class="easyui-dialog" title="选择元件" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
+	<table class="easyui-datagrid" id="itemlist-simple"  >
+	</table>
+</div>

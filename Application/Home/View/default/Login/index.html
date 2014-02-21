@@ -1,0 +1,36 @@
+<!--
+<include file='Frame/frame-blank' />
+-->
+
+<extend name="Frame/frame-blank" />
+
+<block name="nav"></block>
+<block name="menu"></block>
+<block name="subnav"></block>
+
+<block name="content">
+	
+	<switch name="TplStr['_DISPATCH']" >
+		<case value="INDEX">
+			<include file="login-index" />
+		</case>
+		<case value="MODIFY">
+			<include file="modify" />
+		</case>
+		<case value="REG">
+			<include file="register" />
+		</case>
+		<case value="LIST">
+			<include file="Frame/frame-null" />
+		</case>
+		<default />Default page content...
+
+	</switch>
+
+	
+</block>
+
+<block name="bottom">
+	<include file="login-popup" />
+	
+</block>

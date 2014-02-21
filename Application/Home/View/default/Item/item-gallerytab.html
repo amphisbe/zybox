@@ -1,0 +1,36 @@
+<div class="row-fluid sortable">
+	<div class="box span12">
+		<div class="box-header well" data-original-title>
+			<h2><i class="icon-picture"></i> Gallery</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+			
+			<button type="button" class="btn btn-primary" onclick="chooseitem()">选择元件</button>
+			
+			<div id="chooseitem-dlg" class="easyui-dialog" title="选择活动" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
+				<div id="tt" class="easyui-tabs" >
+					<volist name="lists" id="data">
+						<div title="【{$key}】开头" style="padding:20px;">
+						<ul class="thumbnails gallery">
+							
+							<volist name="data['rows']" id="vo">
+							<li id="image-{$vo.guid}" class="thumbnail">
+								<a style="background:url(__PUBLIC__/Web/assets/small/{$vo.display_id}.png)" title="{$vo.name}" href="javascript:void(0)">
+								</a>
+							</li>
+							</volist>
+						</ul>
+						</div>
+					</volist>
+				</div>
+			</div>
+			
+
+		</div>
+	</div><!--/span-->
+</div><!--/row-->

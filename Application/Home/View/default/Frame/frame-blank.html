@@ -1,0 +1,66 @@
+<include file='Frame/frame-header' />
+
+<!-- page nav -->
+<block name="nav"><include file='Frame/frame-nav' /></block>
+<!-- topbar ends -->
+<div class="container-fluid">
+	<div class="row-fluid">
+		<!-- menu -->
+		<block name="menu"><include file='Frame/frame-menu' /></block>
+
+		<noscript>
+			<div class="alert alert-block span10">
+				<h4 class="alert-heading">Warning!</h4>
+				<p>
+					You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.
+				</p>
+			</div>
+		</noscript>
+
+		<div id="content" class="span10">
+			<!-- sub nav -->
+			<block name="subnav">
+			<!-- content starts -->
+			<div>
+				<ul class="breadcrumb">
+					<li>
+						<a href="./">Home</a><span class="divider">/</span>
+					</li>
+					<li>
+						<a href="">{$TplStr['_SUBNAV_TITLE']}</a>
+					</li>
+				</ul>
+			</div>
+			</block>
+			
+			<block name="infobar">
+				<switch name="TplStr['_INFO_TYPE']">
+					<case value="ERROR">
+					<div class="alert alert-error" >
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<strong>{$TplStr['_INFO_TITLE']}</strong> {$TplStr['_INFO_TEXT']}
+					</div>
+					</case>
+					<case value="SUCCESS">
+					<div class="alert alert-success" >
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<strong>{$TplStr['_INFO_TITLE']}</strong> {$TplStr['_INFO_TEXT']}
+					</div>
+					</case>
+				</switch>
+			</block>
+			
+			<!-- page content -->
+			<block name="content">Page</block>
+			
+			<!-- content ends -->
+		</div><!--/#content.span10-->
+	</div><!--/fluid-row-->
+
+	<hr>
+	<!-- page bottom -->
+	<block name="bottom"><include file='Frame/frame-bottom' /></block>
+</div><!--/.fluid-container-->
+<block name="foot">
+<include file='Frame/frame-foot' />
+</block>

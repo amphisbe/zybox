@@ -1,0 +1,51 @@
+<fieldset>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">编号</label>
+		<div class="controls">
+			<input type="text" readonly="readonly" id="guid" name="guid" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">技能名称 </label>
+		<div class="controls">
+			<input type="text" id="name" name="name" >
+		</div>
+	</div>
+	<div class="control-group ">
+		<label class="control-label span2" for="typeahead">类型</label>
+		<div class="controls">
+			<input type="text" id="type" name="type" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">描述</label>
+		<div class="controls">
+			<textarea rows="3" cols="40" id="description" name="description"></textarea>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">技能参数[param]</label>
+		<div class="controls">
+			<input type="text" id="param" name="param" >
+			<button type="button" class="btn btn-primary" onclick="chooseitemlist()">选择item</button>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">排序</label>
+		<div class="controls">
+			<input type="text" id="orderId" name="orderId" >
+		</div>
+	</div>
+	<div class="form-actions">
+		<button type="button" class="btn btn-primary" onclick="saveskill()">
+			保存
+		</button>
+		<a class="btn " iconCls="icon-cancel" onclick="javascript:$('#modifyskillmodal').dialog('close')">
+			关闭
+		</a>
+	</div>
+</fieldset>
+<div id="itemlist-dlg" class="easyui-dialog" title="选择元件" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
+	<table class="easyui-datagrid" id="itemlist-simple"  >
+	</table>
+</div>

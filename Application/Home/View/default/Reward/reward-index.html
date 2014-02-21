@@ -1,0 +1,22 @@
+<div class="row-fluid sortable">
+	<div class="box span12">
+		<div class="box-header well" data-original-title>
+			<h2><i class="icon-user"></i> {$TplStr['_MODAL_TITLE']}</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-setting btn-round" id="addServer"><i class="icon-plus"></i></a>
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+			<table class="easyui-datagrid" id="reward-list"  >
+			</table>
+			<div id="toolbar">
+				<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addreward()">新增奖励</a>
+				<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addrewardclear()">空白新增奖励</a>
+				<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="modifyreward()">修改奖励</a>
+				<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="delreward()">删除奖励</a>
+			</div>
+		</div>
+	</div><!--/span-->
+</div><!--/row-->

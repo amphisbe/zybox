@@ -1,0 +1,44 @@
+<!-- add board -->
+<div class="modal hide fade" id="myModal1">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">
+			Close
+		</button>
+		<h3>公告添加</h3>
+	</div>
+	<div class="modal-body">
+		<div class="row-fluid sortable">
+			<div class="box span12">
+				<div class="box-content">
+					<form class="form-horizontal" id="addboardform" action="Board/add" method="post">
+						<include file="board-form" />
+					</form>
+				</div>
+			</div><!--/span-->
+		</div><!--/row-->
+	</div>
+	<div class="modal-footer">
+	</div>
+</div>
+<!-- modify board -->
+<div class="modal hide fade" id="myModal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">
+			Close
+		</button>
+		<h3>公告修改</h3>
+	</div>
+	<div class="modal-body">
+		<div class="row-fluid sortable">
+			<div class="box span12">
+				<div class="box-content">
+					<form class="form-horizontal" id="modifyboardform" action="Board/modify" method="post">
+						<include file="board-form" />
+					</form>
+				</div>
+			</div><!--/span-->
+		</div><!--/row-->
+	</div>
+	<div class="modal-footer">
+	</div>
+</div>

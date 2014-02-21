@@ -1,0 +1,67 @@
+<!-- add message -->
+<div class="modal hide fade" id="addmessagemodal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">
+			Close
+		</button>
+		<h3>消息添加</h3>
+	</div>
+	<div class="modal-body">
+		<div class="row-fluid sortable">
+			<div class="box span12">
+				<div class="box-content">
+					<form class="form-horizontal" id="addmessageform" action="add" method="post">
+						<include file="addmessage-form" />
+					</form>
+				</div>
+			</div><!--/span-->
+		</div><!--/row-->
+	</div>
+	<div class="modal-footer">
+	</div>
+</div>
+<!-- modify message -->
+<div class="modal hide fade" id="modifymessagemodal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">
+			Close
+		</button>
+		<h3>消息修改</h3>
+	</div>
+	<div class="modal-body">
+		<div class="row-fluid sortable">
+			<div class="box span12">
+				<div class="box-content">
+					<form class="form-horizontal" id="modifymessageform" action="modify" method="post">
+						<include file="message-form" />
+					</form>
+				</div>
+			</div><!--/span-->
+		</div><!--/row-->
+	</div>
+	<div class="modal-footer">
+	</div>
+</div>
+
+<!-- modify tmessage -->
+<div class="modal hide fade" id="modifytmessagemodal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">
+			Close
+		</button>
+		<h3>消息修改</h3>
+	</div>
+	<div class="modal-body">
+		<div class="row-fluid sortable">
+			<div class="box span12">
+				<div class="box-content">
+					<form class="form-horizontal" id="modifytmessageform" action="modifyt" method="post">
+						<include file="tmessage-form" />
+					</form>
+				</div>
+			</div><!--/span-->
+		</div><!--/row-->
+	</div>
+	<div class="modal-footer">
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<!--
+<include file='Frame/frame-blank' />
+-->
+
+<extend name="Frame/frame-blank" />
+
+<block name="content">
+	
+	<switch name="TplStr['_DISPATCH']" >
+		<case value="INDEX">
+			<include file="activity-index" />
+		</case>
+		<case value="INFO">
+			<include file="activityinfo-index" />
+		</case>
+		<case value="LIST">
+			<include file="Frame/frame-null" />
+		</case>
+		<default />Default page content...
+	</switch>
+</block>
+
+
+<block name="popupframe">
+	
+		<include file="activity-popup" />
+		<include file="activityinfo-popup" />
+	
+</block>

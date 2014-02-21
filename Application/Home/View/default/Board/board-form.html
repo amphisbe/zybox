@@ -1,0 +1,63 @@
+<fieldset>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">公告编号 </label>
+		<div class="controls">
+			<input type="text" class="span6 typeahead" readonly="readonly" id="boardid" name="boardid" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">公告排序 </label>
+		<div class="controls">
+			<input type="text" class="span6 typeahead" id="boardpriority" name="boardpriority" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="typeahead">公告标题 </label>
+		<div class="controls">
+			<input type="text" class="span6 typeahead" id="boardtitle" name="boardtitle" >
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="jmpselect">跳转类型 </label>
+		<div class="controls">
+			<select name="jmpselect" id="jmpselect">
+                <option value="1">【1】征讨</option>
+                <option value="2">【2】任务</option>
+                <option value="3">【3】首页</option>
+                <option value="4">【4】我的卡牌</option>
+                <option value="5">【5】我的阵容</option>
+                <option value="6">【6】强化</option>
+                <option value="7">【7】商城-礼包</option>
+                <option value="8">【8】商城-宝箱</option>
+                <option value="9">【9】商城-道具</option>
+                <option value="10">【10】夺宝</option>
+                <option value="11">【11】消息</option>
+                <option value="12">【12】活动</option>
+                <option value="13">【13】充值</option>
+			</select>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label span2" for="textarea2">公告编辑</label>
+		<div class="controls">
+			<textarea class="cleditor" id="boardcontent" name="boardcontent" rows="3"></textarea>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="boardselect">是否有效</label>
+		<div class="controls">
+			<select name="boardselect" id="boardselect">
+				<option value="1">开启</option>
+				<option value="0">关闭</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-actions">
+		<button type="submit" class="btn btn-primary">
+			保存
+		</button>
+		<button class="btn" data-dismiss="modal">
+			关闭
+		</button>
+	</div>
+</fieldset>

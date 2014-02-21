@@ -1,0 +1,53 @@
+<div class="row-fluid sortable">
+	<div class="box span8">
+		<div class="box-header well" data-original-title>
+			<h2><i class="icon-user"></i> {$TplStr['_MODAL_TITLE']}</h2>
+			<div class="box-icon">
+				<!-- <a href="#" class="btn btn-search btn-round" rel="tooltip" title="显示全部角色的消息"><i class="icon-search"></i></a> -->
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+			<table class="table table-striped table-bordered bootstrap-datatable datatable" name="table-board" id="table-board">
+			  <thead>
+				  <tr>
+					  <th>消息编号</th>
+					  <th>时间</th>
+					  <th>是否有效</th>
+					  <th>操作</th>
+				  </tr>
+			  </thead>   
+			  <tbody id="tbody-msg">
+			  	<fieldset id="fieldset-msg">
+			  	</fieldset>
+			  	<volist name="lists" id="vo">
+				<tr >
+					<td><a >{$vo.guid}</a></td>
+					<td class="center">{$vo.time}</td>
+					<td class="center">{$vo.isValid}</td>
+					<td class="center" >
+						<button class="btn btn-mini btn-primary btn-showmsg" data="{$vo.jsontxt}">显示消息</button>
+						<button class="btn btn-mini btn-warning btn-modifytmsg" data-id="{$vo.guid}" data="{$vo.jsontxt}">修改消息</button>
+					</td>
+				</tr>
+				</volist>
+			  </tbody>
+		  </table>            
+		</div>
+	</div><!--/span-->
+	<div class="box span4">
+		<div class="box-header well">
+			<h2><i class="icon-info-sign"></i> 消息内容</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-setting btn-round"><i class="icon-wrench"></i></a>
+			</div>
+		</div>
+		<div class="box-content" id="msgdiv">
+			<h1 id="htxt"></h1>
+			
+			<div class="clearfix" id="info"></div>
+		</div>
+	</div>
+</div><!--/row-->
+<!-- content ends -->

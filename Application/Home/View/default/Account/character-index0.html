@@ -1,0 +1,63 @@
+<div class="row-fluid sortable">
+	<div class="box span8">
+		<div class="box-header well" data-original-title>
+			<h2><i class="icon-user"></i> {$TplStr['_MODAL_TITLE']}</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+			<table class="table table-striped table-bordered bootstrap-datatable datatable" name="table-board" id="table-board">
+			  <thead>
+				  <tr>
+					  <th>账号</th>
+					  <th>角色名称</th>
+					  <th>VIP</th>
+					  <th>金币</th>
+					  <th>元宝</th>
+					  <th>级别</th>
+					  <th>经验</th>
+					  <th>操作</th>
+				  </tr>
+			  </thead>   
+			  <tbody>
+			  	<volist name="lists" id="vo">
+				<tr>
+					<td>{$vo.account_id}</td>
+					<td class="center">{$vo.name}</td>
+					<td class="center">{$vo.vipLevel}</td>
+					<td class="center">{$vo.vm} [+{$vo.vmPercent}]</td>
+					<td class="center">{$vo.rm}</td>
+					<td class="center">{$vo.level}</td>
+					<td class="center">{$vo.xp}</td>
+					<td class="center" >
+						<!-- {$vo.jsontxt} -->
+						<button class="btn btn-mini btn-primary btn-character" data-value='{$vo.jsontxt}'>详细信息</button>
+						<button class="btn btn-mini btn-warning btn-modifycharacter" data-value='{$vo.jsontxt}'>修改信息</button>
+					</td>
+				</tr>
+				</volist>
+			  </tbody>
+		  </table>            
+		</div>
+	</div><!--/span-->
+	<div class="box span4">
+		<div class="box-header well">
+			<h2><i class="icon-info-sign"></i> 角色详情</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content" id="characterdiv">
+			<ul class="dashboard-list">
+				<li>
+				<h1 id="htxt"></h1>
+				<a><img class="dashboard-avatar" id="grayscale" path="__PUBLIC__/Web/assets/long/"></a>
+				<div class="clearfix" id="info"></div>
+				</li>
+			</ul>
+		
+		</div>
+	</div>
+</div><!--/row-->

@@ -1,0 +1,238 @@
+<div class="row-fluid sortable">
+	<div class="box span12">
+		<div class="box-header well" data-original-title>
+			<h2><i class="icon-user"></i> {$TplStr['_MODAL_TITLE']}</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-setting btn-round" id="addServer"><i class="icon-plus"></i></a>
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+			<form class="form-horizontal" action="additem" method="get" >
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label" for="guid">编号 / 显示</label>
+					<div class="controls">
+						<input type="text" id="guid" name="guid" value="505XX">
+						<input type="text" id="diplay_id" name="diplay_id" >
+						<a href="javascript:void(0)" class="choose-image" id="material1-image"><img class="yellowborder 2pxborder" src="__ROOT__/Public/Web/img/no-display.png" width="40px"></a>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="name">名称</label>
+					<div class="controls">
+						<input type="text" id="name" name="name" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="level">级别</label>
+					<div class="controls">
+						<input type="text" id="level" name="level" value="1">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="description">描述</label>
+					<div class="controls">
+						<textarea id="description" class="span4" rows="1" value=""></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="price">价格</label>
+					<div class="controls">
+						<input type="text" id="price" name="price" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="group">组编号 / 名称</label>
+					<div class="controls">
+						<select id="group_id" name="group_id">
+							<option value="0" data-text="其他">0</option>
+							<option value="1" data-text="火影">1</option>
+							<option value="2" data-text="死神">2</option>
+							<option value="3" data-text="海贼">3</option>
+						</select>
+						<input type="text" id="group_name" name="group_name" value="其他">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="item_class">卡牌类型</label>
+					<div class="controls">
+						<select id="item_class" name="item_class">
+							<option selected="selected" value="5" data-id="1">宝物</option>
+							<option value="6" data-id="2">碎片</option>
+							<option value="3" data-id="3">防具</option>
+							<option value="2" data-id="4">武器</option>
+							<option value="4" data-id="5">坐骑</option>
+							<option value="1" data-id="6">英雄</option>
+							<option value="7" data-id="7">宝箱</option>
+							<option value="8" data-id="8">技能</option>
+						</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="star">星级</label>
+					<div class="controls">
+						<select id="star" name="star">
+							<option value="1" >★</option>
+							<option value="2" >★★</option>
+							<option value="3" >★★★</option>
+							<option value="4" >★★★★</option>
+							<option value="5" >★★★★★</option>
+						</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="damage">伤害</label>
+					<div class="controls">
+						<input type="text" id="damage_min" name="damage_min" >~
+						<input type="text" id="damage_max" name="damage_max" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="armor">战斗力</label>
+					<div class="controls">
+						<input type="text" id="armor_min" name="armor_min" >~
+						<input type="text" id="armor_max" name="armor_max" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="xp">xp</label>
+					<div class="controls">
+						<input type="text" id="xp_value" name="xp_value" value="0">
+						<input type="text" id="xp_percent" name="xp_percent" value="0" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="rm">RMB</label>
+					<div class="controls">
+						<input type="text" id="rm_value" name="rm_value" value="0" >
+						<input type="text" id="rm_percent" name="rm_percent" value="0" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="vm">Money</label>
+					<div class="controls">
+						<input type="text" id="vm_value" name="vm_value" value="0" >
+						<input type="text" id="vm_percent" name="vm_percent" value="0" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="vm">EP / SP</label>
+					<div class="controls">
+						<input type="text" id="ep_percent" name="ep_percent" value="0" >
+						<input type="text" id="sp_percent" name="sp_percent" value="0" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="attack_percent">触发几率【攻 / 防】</label>
+					<div class="controls">
+						<input type="text" id="max_attack_percent" name="max_attack_percent" value="0" >
+						<input type="text" id="max_defence_percent" name="max_defence_percent" value="0" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="attack_percent">攻击几率</label>
+					<div class="controls">
+						<input type="text" id="attack_min_percent" name="attack_min_percent" value="0" >
+						<input type="text" id="attack_max_percent" name="attack_max_percent" value="0">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="defence_percent">防御几率</label>
+					<div class="controls">
+						<input type="text" id="defence_min_percent" name="defence_min_percent" value="0" >
+						<input type="text" id="defence_max_percent" name="defence_max_percent" value="0" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="growup">成长</label>
+					<div class="controls">
+						<input type="text" id="growup" name="growup" value="0" >
+						<input type="text" id="correct" name="correct" value="0" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="rebirth">重生【ID / 文本】</label>
+					<div class="controls">
+						<input type="text" id="next_rebirth_id" name="next_rebirth_id" >
+						<input type="text" id="next_rebirth_text" name="next_rebirth_text" >
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="skill_1">技能1 / 描述</label>
+					<div class="controls">
+						<input type="text" id="skill_1_id" name="skill_1_id" >
+						<input type="text" id="skill_1_descripation" name="skill_1_descripation">
+						<a class="btn btn-primary" iconCls="icon-cancel" onclick="chooseskilllist(1)">选择技能</a>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="skill_2">技能2 / 描述</label>
+					<div class="controls">
+						<input type="text" id="skill_2_id" name="skill_2_id" >
+						<input type="text" id="skill_2_descripation" name="skill_2_descripation" >
+						<a class="btn btn-primary" iconCls="icon-cancel" onclick="chooseskilllist(2)" >选择技能</a>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="skill_3">技能3 / 描述</label>
+					<div class="controls">
+						<input type="text" id="skill_3_id" name="skill_3_id" >
+						<input type="text" id="skill_3_descripation" name="skill_3_descripation" >
+						<a class="btn btn-primary" iconCls="icon-cancel" onclick="chooseskilllist(3)" >选择技能</a>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="skill_4">技能4 / 描述</label>
+					<div class="controls">
+						<input type="text" id="skill_4_id" name="skill_4_id" >
+						<input type="text" id="skill_4_descripation" name="skill_4_descripation" >
+						<a class="btn btn-primary" iconCls="icon-cancel" onclick="chooseskilllist(4)" >选择技能</a>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="skill_5">技能5 / 描述</label>
+					<div class="controls">
+						<input type="text" id="skill_5_id" name="skill_5_id" >
+						<input type="text" id="skill_5_descripation" name="skill_5_descripation" >
+						<a class="btn btn-primary" iconCls="icon-cancel" onclick="chooseskilllist(5)" >选择技能</a>
+					</div>
+				</div>
+				
+				
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary" onclick="saveskill()">
+						保存
+					</button>
+					<a class="btn " iconCls="icon-cancel" onclick="javascript:$('#modifyskillmodal').dialog('close')">
+						关闭
+					</a>
+				</div>
+			</fieldset>
+			</form>
+
+		</div>
+	</div><!--/span-->
+</div><!--/row-->
+<div id="chooseitem-dlg" class="easyui-dialog" title="选择图片" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
+	<div id="tt" class="easyui-tabs" >
+		<volist name="lists" id="data">
+			<div title="【{$key}】开头" style="padding:20px;">
+			<ul class="thumbnails gallery">
+				<volist name="data['rows']" id="vo">
+				<li id="image-{$vo.guid}" data-guid="{$vo.guid}" class="thumbnail">
+					<a style="background:url(__PUBLIC__/Web/assets/small/{$vo.display_id}.png)" id='{$vo.display_id}' image-src='__PUBLIC__/Web/assets/small/{$vo.display_id}.png' class="activityform-image" title="{$vo.name}" href="javascript:void(0)">
+					</a>
+				</li>
+				</volist>
+			</ul>
+			</div>
+		</volist>
+	</div>
+</div>
+
+<div id="skilllist-dlg" class="easyui-dialog" title="选择技能" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
+	<table class="easyui-datagrid" id="skilllist-simple"  >
+	</table>
+</div>
